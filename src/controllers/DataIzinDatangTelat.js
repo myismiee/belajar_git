@@ -30,7 +30,7 @@ controller.getDataPengajuanDatangTelat = async(req, res)  =>{
             rule = '',
         } = req.query;
 
-        if(rule == 'subordinate')
+        if(true)
         {
             const pegawai = await model.Pegawai.findOne({
                 where: {
