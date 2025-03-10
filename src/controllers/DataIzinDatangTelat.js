@@ -68,6 +68,19 @@ controller.getDataPengajuanDatangTelat = async(req, res)  =>{
         console.log(error);
     }
 }
+controller.getDataPengajuanDatangTelatDetail = async(req, res) =>{
+    try {
+        const data = await model.DataIzinDatangTelat.findOne({
+            where:{
+                ID_DATA_IZIN_DATANG_TELAT: req.params.id
+            },
+        });
+
+        res.json(data);
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 
 export default controller;
